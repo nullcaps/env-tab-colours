@@ -1,17 +1,22 @@
-/* Hide default container marking */
+/* Set active tab background for regular, non-container tabs */
+:root {
+  --active-tab-colour: #ECCECE;
+}
+
+/* Hide default container indicator */
 #tabbrowser-tabs .tab-context-line {
     display: none;
 }
 
-/* Use container colour for inactive tab background */
+/* Set active tab background to container colour, hide theme's background image if present */
+#tabbrowser-tabs .tab-background[selected="true"] {
+    background-color: var(--identity-icon-color, var(--active-tab-colour)) !important;
+    background-image: none !important;
+    filter: brightness(100%);
+}
+
+/* Set inactive tab background to dimmed container colour */
 #tabbrowser-tabs .tab-background {
     background-color: var(--identity-icon-color) !important;
     filter: brightness(50%);
-}
-
-/* Use container colour for active tab background. If active tab is not a container, use hex colour below (hides tab background images) */
-#tabbrowser-tabs .tab-background[selected="true"] {
-    background-color: var(--identity-icon-color, #ECCECE) !important;
-    background-image: none !important;
-    filter: brightness(100%);
 }
