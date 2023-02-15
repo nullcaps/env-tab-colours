@@ -16,6 +16,7 @@ Open CSS file and edit the following:
 1. The colours to use for your environments
 2. The domains associated with each environment
 3. Any subdomains you want to leave uncoloured
+4. Fully close Vivaldi and reopen
 
 ## Firefox installation
 ### Enable custom CSS
