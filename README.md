@@ -35,5 +35,3 @@ If you don't already have it, grab the Firefox Multi-Account  containers extensi
 Once the addon is installed, whitelist whichever domains you would like to be highlighted and select the colour to use from the addon menu.
 
 **Recommended**: Enable 'limit to designated sites' to move out of the container when moving to a different domain
-
-**Optional**: Open userChrome.css and change active-tab-colour
