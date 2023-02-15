@@ -24,9 +24,10 @@ See [https://www.userchrome.org/](https://www.userchrome.org/how-create-userchro
 1. Visit the default profile folder for Firefox. Usually: `~/Library/Application Support/Firefox/Profiles/<randomstring>.default-release/`
 2. Create folder, name it '**chrome**'
 3. Paste userChrome.css from this repo to chrome folder
-4. Open Firefox and go to '**about:config**'
-5. In the search bar, enter 'userprof', find '**toolkit.legacyUserProfileCustomizations.stylesheets**', and set to true
-6. Fully close Firefox and reopen
+4. (Optional) Open css and set a colour to use for non-container tabs
+5. Open Firefox and go to '**about:config**'
+6. In the search bar, enter 'userprof', find '**toolkit.legacyUserProfileCustomizations.stylesheets**', and set to true
+7. Fully close Firefox and reopen
 
 ### Whitelist domains in Firefox containers
 If you don't already have it, grab the Firefox Multi-Account  containers extension from [https://addons.mozilla.org/](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/)
@@ -34,3 +35,5 @@ If you don't already have it, grab the Firefox Multi-Account  containers extensi
 Once the addon is installed, whitelist whichever domains you would like to be highlighted and select the colour to use from the addon menu.
 
 **Recommended**: Enable 'limit to designated sites' to move out of the container when moving to a different domain
+
+**Optional**: Open userChrome.css and change active-tab-colour
