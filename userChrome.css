@@ -1,0 +1,17 @@
+/* Hide default container marking */
+#tabbrowser-tabs .tab-context-line {
+    display: none;
+}
+
+/* Use container colour for inactive tab background */
+#tabbrowser-tabs .tab-background {
+    background-color: var(--identity-icon-color) !important;
+    filter: brightness(50%);
+}
+
+/* Use container colour for active tab background. If active tab is not a container, use hex colour below (hides tab background images) */
+#tabbrowser-tabs .tab-background[selected="true"] {
+    background-color: var(--identity-icon-color, #ECCECE) !important;
+    background-image: none !important;
+    filter: brightness(100%);
+}
