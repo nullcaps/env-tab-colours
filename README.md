@@ -1,6 +1,8 @@
 # Environment-based tab colours
 For Firefox and Vivaldi browsers only (sadly no CSS UI editing in Google Chrome or Safari).
 
+![Demo screenshot](./tab-colour-demo.png)
+
 ## Vivaldi installation
 ### Enable custom CSS
 See [https://forum.vivaldi.net/topic/10549/modding-vivaldi](https://forum.vivaldi.net/topic/10549/modding-vivaldi) for full instructions. Summary:
