@@ -1,1 +1,29 @@
+/* Set colours and domains */
+:root {
+    --prod-env-colour: #FF613D;
+    --test-env-colour: #00C79A;
+}
 
+/* Colour tabs in production domains */
+#browser .tab-position .tab:has(img[srcset*="production.com"], img[srcset*="saas.com/admin/"]) {
+    background-color: var(--prod-env-colour) !important;
+    color: black !important;
+}
+
+/* Colour tabs for test domains */
+#browser .tab-position .tab:has(img[srcset*="preproduction.com"], img[srcset*="saas.com/test/admin/"]) {
+    background-color: var(--test-env-colour) !important;
+    color: black !important;
+}
+
+/* Dim background tabs */
+#browser .tab-position .tab:not(.active) {
+    filter: brightness(50%);
+}
+
+/* Ignore the following subdomains */
+#browser .tab-position .tab:has(img[srcset*="jira.production.com"], img[srcset*="wiki.production.com"]) {
+    background-color: inherit !important;
+    filter: inherit !important;
+    color: inherit !important;
+}
