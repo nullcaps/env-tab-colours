@@ -1,0 +1,23 @@
+/* Set colours */
+:root {
+    --prod-env-colour: #FF613D;
+    --test-env-colour: #00C79A;
+}
+
+/* Colour toolbar in production domains */
+#browser .toolbar:has(input[value*="example.com"], input[value*="saas.com/admin/"]) {
+    background-color: var(--prod-env-colour) !important;
+    color: black !important;
+}
+
+/* Colour toolbar for test domains */
+#browser .toolbar:has(input[value*="example-test.com"], input[value*="saas.com/test/admin/"]) {
+    background-color: var(--test-env-colour) !important;
+    color: black !important;
+}
+
+/* Ignore the following subdomains */
+#browser .toolbar:has(input[value*="jira.example.com"], input[value*="wiki.example.com"]) {
+    background-color: inherit !important;
+    color: inherit !important;
+}
