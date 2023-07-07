@@ -10,7 +10,7 @@ See [https://forum.vivaldi.net/topic/10549/modding-vivaldi](https://forum.vivald
 1. Open Vivaldi, and go to '**vivaldi://experiments**'
 2. Enable '**Allow for using CSS modifications**'
 3. Open appearance section in settings, then choose the folder to store your CSS files in
-4. Paste customUI.css from this repo to chrome folder
+4. Paste the `customTabs.css` file from this repo to chrome folder
 
 ### Whitelist domains in CSS
 Open CSS file and edit the following:
@@ -19,6 +19,11 @@ Open CSS file and edit the following:
 2. The domains associated with each environment
 3. Any subdomains you want to leave uncoloured
 4. Fully close Vivaldi and reopen
+
+### Unreliable?
+Due to a quirk in Vivaldi's design, tabs can currently only be coloured by the domain of the favicon in use (rather than the domain of the page). If this isn't reliable in your environment, highlighting the toolbar is the next best option (as it can query the page url instead).
+
+To highlight the toolbar instead, follow the same steps above using the `customToolbar.css` file.
 
 ## Firefox installation
 ### Enable custom CSS
