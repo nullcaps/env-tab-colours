@@ -1,17 +1,17 @@
-/* Set colours and domains */
+/* Set colours */
 :root {
     --prod-env-colour: #FF613D;
     --test-env-colour: #00C79A;
 }
 
 /* Colour tabs in production domains */
-#browser .tab-position .tab:has(img[srcset*="production.com"], img[srcset*="saas.com/admin/"]) {
+#browser .tab-position .tab:has(img[srcset*="example.com"], img[srcset*="saas.com/admin/"]) {
     background-color: var(--prod-env-colour) !important;
     color: black !important;
 }
 
 /* Colour tabs for test domains */
-#browser .tab-position .tab:has(img[srcset*="preproduction.com"], img[srcset*="saas.com/test/admin/"]) {
+#browser .tab-position .tab:has(img[srcset*="example-test.com"], img[srcset*="saas.com/test/admin/"]) {
     background-color: var(--test-env-colour) !important;
     color: black !important;
 }
@@ -22,7 +22,7 @@
 }
 
 /* Ignore the following subdomains */
-#browser .tab-position .tab:has(img[srcset*="jira.production.com"], img[srcset*="wiki.production.com"]) {
+#browser .tab-position .tab:has(img[srcset*="jira.example.com"], img[srcset*="wiki.example.com"]) {
     background-color: inherit !important;
     filter: inherit !important;
     color: inherit !important;
